@@ -1,0 +1,18 @@
+We need to break KIFT into different parts as follows:
+
+	Organize functions to detect phones
+	Make functions that are called for setting alarm, brightness, etc
+	Create a server to house database material (XML, JSON, db, etc)
+	Create a client which uses functions to detect phones (edited)
+
+
+How it works will be:
+
+	Turn on server
+	Turn on client
+	User speaks into client
+	Client detects phones with pocketsphinx
+	Client breaks phones down into vectors and sends to server
+	Server interprets phone vectors and searches for a valid function
+	Server also TRAINS according to multiple attempts
+	Server calls appropriate function with valid phone vector (edited)
