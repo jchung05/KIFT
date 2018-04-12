@@ -1,9 +1,11 @@
 We need to break KIFT into different parts as follows:
 
-	Organize functions to detect phones
 	Make functions that are called for setting alarm, brightness, etc
 	Create a server to house database material (XML, JSON, db, etc)
 	Create a client which uses functions to detect phones (edited)
+	Possibly create a website
+(+)	Create a script for Mac OS X to install CMUSphinx
+	Create a script for Linux to install CMUSphinx
 
 
 How it works will be:
@@ -12,7 +14,18 @@ How it works will be:
 	Turn on client
 	User speaks into client
 	Client detects phones with pocketsphinx
-	Client breaks phones down into vectors and sends to server
-	Server interprets phone vectors and searches for a valid function
+	Client breaks phones down into syntactic sentences and sends to server
 	Server also TRAINS according to multiple attempts
-	Server calls appropriate function with valid phone vector (edited)
+	Server calls appropriate function with valid sentences
+
+Server Functions:
+	
+	Set an alarm / timer
+	Turn on / off lights
+	Send email / SMS
+	Check current events / weather / traffic
+	Check clients currently connected to server
+	Check user client's location
+	Play some music
+	Search web for ______
+	Check usage history
