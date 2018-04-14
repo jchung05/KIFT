@@ -1,6 +1,5 @@
 We need to break KIFT into different parts as follows:
 
-	Make functions that are called for setting alarm, brightness, etc
 	Create a server to house database material (XML, JSON, db, etc)
 	Create a client which uses functions to detect phones (edited)
 	Possibly create a website
@@ -29,3 +28,5 @@ Server Functions:
 	Play some music
 	Search web for ______
 	Check usage history
+	Exit function to close program
+	Default case if they don't say a proper command
