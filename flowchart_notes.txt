@@ -29,4 +29,4 @@ Server Functions:
 	Search web for ______
 	Check usage history
 	Exit function to close program
-	Default case if they don't say a proper command
+	Default case if improper command
