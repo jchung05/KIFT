@@ -1,1 +1,1 @@
-pocketsphinx_continuous -inmic yes 2>/dev/null | tee -a history.log | egrep -v --line-buffered '^INFO:|^ERROR:'
+pocketsphinx_continuous -inmic yes -logfn /dev/null | awk -v date="$(date +"%m-%d-%Y %r")" '{print date,$0;fflush(stdout)}' | tee ./history.log
