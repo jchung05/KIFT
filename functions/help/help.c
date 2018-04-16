@@ -6,16 +6,16 @@
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 12:52:12 by sjuery           ###   ########.fr       */
+/*   Updated: 2018/04/14 12:06:50 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
+void help()
 {
-		system("sh location.sh");
+	system("sh help.sh");
 }
 
 int main(int argc, char const *argv[]) {
-	location();
+	help();
 	return 0;
 }

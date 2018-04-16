@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   brightness.c                                       :+:      :+:    :+:   */
+/*   search.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ttran <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/13 21:25:29 by ttran             #+#    #+#             */
-/*   Updated: 2018/04/13 22:08:46 by ttran            ###   ########.fr       */
+/*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
+/*   Updated: 2018/04/15 19:37:00 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-/*
-** int system(const char *command) allows for the execution of shell commands
-** system("command");
-*/
-
-int brightness(char *brightness_value)
+void search(char *arg)
 {
+	char cmd[256];
 
-	return (0);
+	sprintf(cmd, "say searching for %s", arg);
+	system(cmd);
+	sprintf(cmd, "sh search.sh %s", arg);
+	system(cmd);
 }
 
-int main(void)
-{
-	brightness(5);
-	return (0);
+int main(int argc, char const *argv[]) {
+	search(argv[1]);
+	return 0;
 }
-
