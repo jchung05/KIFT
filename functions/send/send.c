@@ -6,27 +6,33 @@
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 14:04:57 by sjuery           ###   ########.fr       */
+/*   Updated: 2018/04/16 17:43:41 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void send(char *arg, char *content, char *user)
+#include <stdio.h>
+#include <stdlib.h>
+
+void send(char *subject, char *content, char *recipient)
 {
-	char cmd[9999];
+	char cmd[256];
 
-	if(!strcmp(arg, "mail") && content && user)
+	if(!content || !recipient || !subject)
 	{
-		sprintf(cmd, "echo %s | mail -s Kift %s", content, user);
-		system(cmd);
-		system("say mail sent");
+		if(!content)
+			content = "empty";
+		if(!recipient)
+			recipient = "empty";
+		if(!subject)
+			subject = "empty";
+		sprintf(cmd, "say your subject is %s, your content is %s, and your"
+						" receipent is %s. Make sure none of them are empty",
+						subject, content, recipient);
 	}
-	else if(!strcmp(arg, "sms"))
-		system("say no sms credit please top up!");
 	else
-		system("say did you forget some content?");
-}
-
-int main(int argc, char const *argv[]) {
-	send(argv[1], argv[2], argv[3]);
-	return 0;
+	{
+		sprintf(cmd, "echo %s | mail -s %s %s", content, subject, recipient);
+		system("say mail sent!");
+	}
+	system(cmd);
 }

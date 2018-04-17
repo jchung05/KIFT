@@ -1,7 +1,6 @@
 Set an alarm
 Set a timer
 Send email
-Send SMS
 Check current events
 Check current weather
 Check traffic

@@ -1,1 +1,0 @@
-say -f help.txt
