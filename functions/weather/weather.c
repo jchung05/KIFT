@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   location.c                                         :+:      :+:    :+:   */
+/*   weather.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 12:52:12 by sjuery           ###   ########.fr       */
+/*   Updated: 2018/04/15 19:45:24 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
+void weather(char *location)
 {
-		system("sh location.sh");
+	char cmd[256];
+
+	sprintf(cmd, "curl wttr.in/%s | sed -n 1,4p | sed -r "s/[[:cntrl:]]\[[0-9]{1,3}m/ /g"", location);
+	system(cmd);
+	system("say -f weather_report.log");
 }
 
 int main(int argc, char const *argv[]) {
-	location();
+	weather(argv[1]);
 	return 0;
 }

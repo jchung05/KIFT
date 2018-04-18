@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   location.c                                         :+:      :+:    :+:   */
+/*   help.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 12:52:12 by sjuery           ###   ########.fr       */
+/*   Updated: 2018/04/16 17:45:26 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
+void help()
 {
-		system("sh location.sh");
-}
-
-int main(int argc, char const *argv[]) {
-	location();
-	return 0;
+	system("say -f help.txt");
 }

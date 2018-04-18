@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   location.c                                         :+:      :+:    :+:   */
+/*   send.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 12:52:12 by sjuery           ###   ########.fr       */
+/*   Updated: 2018/04/16 17:43:41 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
-{
-		system("sh location.sh");
-}
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char const *argv[]) {
-	location();
-	return 0;
+void send(char *subject, char *content, char *recipient)
+{
+	char cmd[256];
+
+	if(!content || !recipient || !subject)
+	{
+		if(!content)
+			content = "empty";
+		if(!recipient)
+			recipient = "empty";
+		if(!subject)
+			subject = "empty";
+		sprintf(cmd, "say your subject is %s, your content is %s, and your"
+						" receipent is %s. Make sure none of them are empty",
+						subject, content, recipient);
+	}
+	else
+	{
+		sprintf(cmd, "echo %s | mail -s %s %s", content, subject, recipient);
+		system("say mail sent!");
+	}
+	system(cmd);
 }

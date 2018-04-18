@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   location.c                                         :+:      :+:    :+:   */
+/*   search.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 12:52:12 by sjuery           ###   ########.fr       */
+/*   Updated: 2018/04/16 16:55:23 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
+void search(char *arg)
 {
-		system("sh location.sh");
+	char cmd[256];
+
+	sprintf(cmd, "say searching for %s", arg);
+	system(cmd);
+	sprintf(cmd, "sh search.sh %s", arg);
+	system(cmd);
 }
 
 int main(int argc, char const *argv[]) {
-	location();
+	search(argv[1]);
 	return 0;
 }

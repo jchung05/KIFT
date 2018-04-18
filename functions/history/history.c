@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   location.c                                         :+:      :+:    :+:   */
+/*   history.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sjuery <sjuery@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/13 18:28:43 by sjuery            #+#    #+#             */
-/*   Updated: 2018/04/14 12:52:12 by sjuery           ###   ########.fr       */
+/*   Created: 2018/04/16 14:03:44 by sjuery            #+#    #+#             */
+/*   Updated: 2018/04/16 17:45:48 by sjuery           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
+void history()
 {
-		system("sh location.sh");
-}
-
-int main(int argc, char const *argv[]) {
-	location();
-	return 0;
+	system("say -f ../../history.log");
 }
