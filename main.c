@@ -6,7 +6,7 @@
 /*   By: jchung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 20:27:55 by jchung            #+#    #+#             */
-/*   Updated: 2018/04/23 14:48:21 by jchung           ###   ########.fr       */
+/*   Updated: 2018/04/23 15:26:58 by jchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char const			*decoded_speech;
 
 int					main(int argc, char **argv)
 {
+	FILE			*fp;
 	time_t			rawtime;
 	struct tm		*timeinfo;
 	char			buf[80];
@@ -66,17 +67,17 @@ int					main(int argc, char **argv)
 
 	while(1)
 	{
+		fp = fopen("history.log", "ab+");
 		decoded_speech = recognize_from_microphone();
 		time(&rawtime);
 		timeinfo = localtime(&rawtime);
-		printf("%d/%d/%d - %d:%d:%d: %s\n",
-				timeinfo->tm_mon + 1,
-				timeinfo->tm_mday,
-				timeinfo->tm_year + 1900,
-				timeinfo->tm_hour,
-				timeinfo->tm_min,
-				timeinfo->tm_sec,
-				decoded_speech);
+		strftime(buf, 1024, "%D - %T", timeinfo);
+		printf("%s: %s\n", buf, decoded_speech);
+		fwrite(buf, 1, strlen(buf), fp);
+		fwrite(": ", 1, 2, fp);
+		fwrite(decoded_speech, 1, strlen(decoded_speech), fp);
+		fwrite("\n", 1, 1, fp);
+		fclose(fp);
 	}
 	ad_close(ad);
 }
@@ -99,7 +100,6 @@ const char			*recognize_from_microphone(void)
 			ad_stop_rec(ad);
 			hyp = ps_get_hyp(ps, NULL );
 			return (hyp);
-			break;
 		}
 	}
 }
