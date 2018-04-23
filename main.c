@@ -6,7 +6,7 @@
 /*   By: jchung <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 20:27:55 by jchung            #+#    #+#             */
-/*   Updated: 2018/04/22 20:34:10 by jchung           ###   ########.fr       */
+/*   Updated: 2018/04/23 14:48:21 by jchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,12 @@ char const			*decoded_speech;
  ** when the corpus.txt is trained
  */
 
-int					main(int argc, char **argv) {
+int					main(int argc, char **argv)
+{
+	time_t			rawtime;
+	struct tm		*timeinfo;
+	char			buf[80];
+
 	config = cmd_ln_init(NULL, ps_args(), TRUE, 
 				"-hmm", MODELDIR "/en-us/en-us",
 				"-lm", MODELDIR "/en-us/en-us.lm.bin",
@@ -54,18 +59,30 @@ int					main(int argc, char **argv) {
 		return (-1);
 	}
 
-	printf("config done\n");
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+	printf("config done at %s\n", asctime(timeinfo));
 	ad = ad_open_dev("sysdefault", (int) cmd_ln_float32_r(config, "-samprate"));
 
 	while(1)
 	{
 		decoded_speech = recognize_from_microphone();
-		printf("You said: %s\n", decoded_speech);
+		time(&rawtime);
+		timeinfo = localtime(&rawtime);
+		printf("%d/%d/%d - %d:%d:%d: %s\n",
+				timeinfo->tm_mon + 1,
+				timeinfo->tm_mday,
+				timeinfo->tm_year + 1900,
+				timeinfo->tm_hour,
+				timeinfo->tm_min,
+				timeinfo->tm_sec,
+				decoded_speech);
 	}
 	ad_close(ad);
 }
 
-const char			*recognize_from_microphone(void){
+const char			*recognize_from_microphone(void)
+{
 	ad_start_rec(ad);
 	ps_start_utt(ps);
 	utt_started = FALSE;
