@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 01:11:52 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/04/23 02:14:43 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/04/23 04:48:17 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ cmd_ln_t			*config;
 ad_rec_t			*ad;
 
 int16				adbuf[512];
-uint8				utt_started, in_speech;
+uint8				utt_started;
+uint8				in_speech;
 int32				k;
 char const			*hyp;
 char const			*decoded_speech;
@@ -73,10 +74,20 @@ int			main(int ac, char **av)
 		decoded_speech = recognize_from_microphone();
 		printf("You said: %s\n", decoded_speech);
 	}
+	// close recorder
 	ad_close(ad);
 }
 
-const char			*recognize_from_microphone(void){
+/*
+** ad_functions are recorder managment
+**
+** what is ps_start_utt(ps) | ps - decoder
+**  basically start interpreting stuff recorded
+**
+*/
+
+const char			*recognize_from_microphone(void)
+{
 	ad_start_rec(ad);
 	ps_start_utt(ps);
 	utt_started = FALSE;
@@ -87,6 +98,7 @@ const char			*recognize_from_microphone(void){
 		in_speech = ps_get_in_speech(ps);
 		if (in_speech && !utt_started)
 			utt_started = TRUE;
+		// ^ verifiers in case audio file is just garbage noise
  		if (!in_speech && utt_started)
 		{
 			ps_end_utt(ps);
