@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 01:11:52 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/04/23 04:48:17 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/04/23 06:41:08 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,22 @@ char const			*decoded_speech;
 
 int			main(int ac, char **av)
 {
+	/*
 	config = cmd_ln_init(NULL, ps_args(), TRUE,
 			"-hmm", MODELDIR "/en-us/en-us",
 			"-lm", MODELDIR "/en-us/en-us.lm.bin",
 			"-dict", MODELDIR "/en-us/cmudict-en-us.dict",
 			"-logfn", "/dev/null",
 			NULL);
+	*/
+
+	config = cmd_ln_init(NULL, ps_args(), TRUE,
+			"-hmm", MODELDIR "/en-us/en-us",
+			"-lm", PENDEJADA "/PENDEJADADICTIONARY/2877.lm",
+			"-dict", PENDEJADA "/PENDEJADADICTIONARY/2877.dic",
+			"-logfn", "./testinglog",
+			NULL);
+
 
 	if (!config)
 	{
@@ -69,6 +79,9 @@ int			main(int ac, char **av)
 	// link = https://github.com/cmusphinx/sphinxbase/blob/master/src/libsphinxbase/fe/fe_interface.c
 	ad = ad_open_dev("sysdefault", (int)cmd_ln_float32_r(config, "-samprate"));
 
+//	ps_set_keyphrase(ps, "keyphrase_search", "PENDEJADA");
+	ps_set_keyphrase(ps, "keyphrase_search", "SET");
+//	ps_set_search(ps, "keyphrase_search");
 	while (1)
 	{
 		decoded_speech = recognize_from_microphone();
@@ -90,6 +103,8 @@ const char			*recognize_from_microphone(void)
 {
 	ad_start_rec(ad);
 	ps_start_utt(ps);
+	ps_set_search(ps, "keyphrase_search");
+	printf("valor = |%d|\n", ps_set_search(ps, "keyphrase_search"));
 	utt_started = FALSE;
 	while(1)
 	{
@@ -99,6 +114,7 @@ const char			*recognize_from_microphone(void)
 		if (in_speech && !utt_started)
 			utt_started = TRUE;
 		// ^ verifiers in case audio file is just garbage noise
+// 		if (!in_speech && utt_started)
  		if (!in_speech && utt_started)
 		{
 			ps_end_utt(ps);
