@@ -18646,3 +18646,475 @@ INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
 INFO: ngram_search.c(875): bestpath 0.01 wall 0.013 xRT
 ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
 ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: pocketsphinx.c(152): Parsed model-specific feature parameters from /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/feat.params
+Current configuration:
+[NAME]			[DEFLT]		[VALUE]
+-agc			none		none
+-agcthresh		2.0		2.000000e+00
+-allphone				
+-allphone_ci		yes		yes
+-alpha			0.97		9.700000e-01
+-ascale			20.0		2.000000e+01
+-aw			1		1
+-backtrace		no		no
+-beam			1e-48		1.000000e-48
+-bestpath		yes		yes
+-bestpathlw		9.5		9.500000e+00
+-ceplen			13		13
+-cmn			live		batch
+-cmninit		40,3,-1		41.00,-5.29,-0.12,5.09,2.48,-4.07,-1.37,-1.78,-5.08,-2.05,-6.45,-1.42,1.17
+-compallsen		no		no
+-dict					/nfs/2017/g/gmalpart/gerardo/KIFTworking/PENDEJADADICTIONARY/2877.dic
+-dictcase		no		no
+-dither			no		no
+-doublebw		no		no
+-ds			1		1
+-fdict					
+-feat			1s_c_d_dd	1s_c_d_dd
+-featparams				
+-fillprob		1e-8		1.000000e-08
+-frate			100		100
+-fsg					
+-fsgusealtpron		yes		yes
+-fsgusefiller		yes		yes
+-fwdflat		yes		yes
+-fwdflatbeam		1e-64		1.000000e-64
+-fwdflatefwid		4		4
+-fwdflatlw		8.5		8.500000e+00
+-fwdflatsfwin		25		25
+-fwdflatwbeam		7e-29		7.000000e-29
+-fwdtree		yes		yes
+-hmm					/nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us
+-input_endian		little		little
+-jsgf					
+-keyphrase				
+-kws					
+-kws_delay		10		10
+-kws_plp		1e-1		1.000000e-01
+-kws_threshold		1e-30		1.000000e-30
+-latsize		5000		5000
+-lda					
+-ldadim			0		0
+-lifter			0		22
+-lm					/nfs/2017/g/gmalpart/gerardo/KIFTworking/PENDEJADADICTIONARY/2877.lm
+-lmctl					
+-lmname					
+-logbase		1.0001		1.000100e+00
+-logfn					./testinglog
+-logspec		no		no
+-lowerf			133.33334	1.300000e+02
+-lpbeam			1e-40		1.000000e-40
+-lponlybeam		7e-29		7.000000e-29
+-lw			6.5		6.500000e+00
+-maxhmmpf		30000		30000
+-maxwpf			-1		-1
+-mdef					
+-mean					
+-mfclogdir				
+-min_endfr		0		0
+-mixw					
+-mixwfloor		0.0000001	1.000000e-07
+-mllr					
+-mmap			yes		yes
+-ncep			13		13
+-nfft			512		512
+-nfilt			40		25
+-nwpen			1.0		1.000000e+00
+-pbeam			1e-48		1.000000e-48
+-pip			1.0		1.000000e+00
+-pl_beam		1e-10		1.000000e-10
+-pl_pbeam		1e-10		1.000000e-10
+-pl_pip			1.0		1.000000e+00
+-pl_weight		3.0		3.000000e+00
+-pl_window		5		5
+-rawlogdir				
+-remove_dc		no		no
+-remove_noise		yes		yes
+-remove_silence		yes		yes
+-round_filters		yes		yes
+-samprate		16000		1.600000e+04
+-seed			-1		-1
+-sendump				
+-senlogdir				
+-senmgau				
+-silprob		0.005		5.000000e-03
+-smoothspec		no		no
+-svspec					0-12/13-25/26-38
+-tmat					
+-tmatfloor		0.0001		1.000000e-04
+-topn			4		4
+-topn_beam		0		0
+-toprule				
+-transform		legacy		dct
+-unit_area		yes		yes
+-upperf			6855.4976	6.800000e+03
+-uw			1.0		1.000000e+00
+-vad_postspeech		50		50
+-vad_prespeech		20		20
+-vad_startspeech	10		10
+-vad_threshold		3.0		3.000000e+00
+-var					
+-varfloor		0.0001		1.000000e-04
+-varnorm		no		no
+-verbose		no		no
+-warp_params				
+-warp_type		inverse_linear	inverse_linear
+-wbeam			7e-29		7.000000e-29
+-wip			0.65		6.500000e-01
+-wlen			0.025625	2.562500e-02
+
+INFO: feat.c(715): Initializing feature stream to type: '1s_c_d_dd', ceplen=13, CMN='batch', VARNORM='no', AGC='none'
+INFO: acmod.c(162): Using subvector specification 0-12/13-25/26-38
+INFO: mdef.c(518): Reading model definition: /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/mdef
+INFO: mdef.c(531): Found byte-order mark BMDF, assuming this is a binary mdef file
+INFO: bin_mdef.c(336): Reading binary model definition: /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/mdef
+INFO: bin_mdef.c(516): 42 CI-phone, 137053 CD-phone, 3 emitstate/phone, 126 CI-sen, 5126 Sen, 29324 Sen-Seq
+INFO: tmat.c(149): Reading HMM transition probability matrices: /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/transition_matrices
+INFO: acmod.c(113): Attempting to use PTM computation module
+INFO: ms_gauden.c(127): Reading mixture gaussian parameter: /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/means
+INFO: ms_gauden.c(242): 42 codebook, 3 feature, size: 
+INFO: ms_gauden.c(244):  128x13
+INFO: ms_gauden.c(244):  128x13
+INFO: ms_gauden.c(244):  128x13
+INFO: ms_gauden.c(127): Reading mixture gaussian parameter: /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/variances
+INFO: ms_gauden.c(242): 42 codebook, 3 feature, size: 
+INFO: ms_gauden.c(244):  128x13
+INFO: ms_gauden.c(244):  128x13
+INFO: ms_gauden.c(244):  128x13
+INFO: ms_gauden.c(304): 222 variance values floored
+INFO: ptm_mgau.c(475): Loading senones from dump file /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/sendump
+INFO: ptm_mgau.c(499): BEGIN FILE FORMAT DESCRIPTION
+INFO: ptm_mgau.c(562): Rows: 128, Columns: 5126
+INFO: ptm_mgau.c(594): Using memory-mapped I/O for senones
+INFO: ptm_mgau.c(837): Maximum top-N: 4
+INFO: phone_loop_search.c(114): State beam -225 Phone exit beam -225 Insertion penalty 0
+INFO: dict.c(320): Allocating 4171 * 32 bytes (130 KiB) for word entries
+INFO: dict.c(333): Reading main dictionary: /nfs/2017/g/gmalpart/gerardo/KIFTworking/PENDEJADADICTIONARY/2877.dic
+INFO: dict.c(213): Dictionary size 70, allocated 0 KiB for strings, 0 KiB for phones
+INFO: dict.c(336): 70 words read
+INFO: dict.c(358): Reading filler dictionary: /nfs/2017/g/gmalpart/.brew/Cellar/cmu-pocketsphinx/HEAD-c178c8d/share/pocketsphinx/model/en-us/en-us/noisedict
+INFO: dict.c(213): Dictionary size 75, allocated 0 KiB for strings, 0 KiB for phones
+INFO: dict.c(361): 5 words read
+INFO: dict2pid.c(396): Building PID tables for dictionary
+INFO: dict2pid.c(406): Allocating 42^3 * 2 bytes (144 KiB) for word-initial triphones
+INFO: dict2pid.c(132): Allocated 42672 bytes (41 KiB) for word-final triphones
+INFO: dict2pid.c(196): Allocated 42672 bytes (41 KiB) for single-phone word triphones
+INFO: ngram_model_trie.c(354): Trying to read LM in trie binary format
+INFO: ngram_model_trie.c(365): Header doesn't match
+INFO: ngram_model_trie.c(177): Trying to read LM in arpa format
+INFO: ngram_model_trie.c(193): LM of order 3
+INFO: ngram_model_trie.c(195): #1-grams: 60
+INFO: ngram_model_trie.c(195): #2-grams: 77
+INFO: ngram_model_trie.c(195): #3-grams: 65
+INFO: lm_trie.c(474): Training quantizer
+INFO: lm_trie.c(482): Building LM trie
+INFO: ngram_search_fwdtree.c(74): Initializing search tree
+INFO: ngram_search_fwdtree.c(101): 46 unique initial diphones
+INFO: ngram_search_fwdtree.c(186): Creating search channels
+INFO: ngram_search_fwdtree.c(323): Max nonroot chan increased to 265
+INFO: ngram_search_fwdtree.c(333): Created 46 root, 137 non-root channels, 8 single-phone words
+INFO: ngram_search_fwdflat.c(157): fwdflat: min_ef_width = 4, max_sf_win = 25
+INFO: kws_search.c(406): KWS(beam: -1080, plp: -23, default threshold -675, delay 10)
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 41.00 -5.29 -0.12  5.09  2.48 -4.07 -1.37 -1.78 -5.08 -2.05 -6.45 -1.42  1.17 >
+INFO: cmn_live.c(138): Update to   < 28.90 19.00 -6.29  2.37 -13.64 -5.31 -9.56 -6.04 -6.97  3.74  2.41  1.73 -1.96 >
+INFO: ngram_search_fwdtree.c(1550):      936 words recognized (8/fr)
+INFO: ngram_search_fwdtree.c(1552):    56502 senones evaluated (475/fr)
+INFO: ngram_search_fwdtree.c(1556):    30120 channels searched (253/fr), 5290 1st, 14676 last
+INFO: ngram_search_fwdtree.c(1559):     1414 words for which last channels evaluated (11/fr)
+INFO: ngram_search_fwdtree.c(1561):     2041 candidate words for entering last phone (17/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.71 CPU 1.439 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.82 wall 1.533 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 7 words
+INFO: ngram_search_fwdflat.c(948):      671 words recognized (6/fr)
+INFO: ngram_search_fwdflat.c(950):     8463 senones evaluated (71/fr)
+INFO: ngram_search_fwdflat.c(952):     4336 channels searched (36/fr)
+INFO: ngram_search_fwdflat.c(954):      928 words searched (7/fr)
+INFO: ngram_search_fwdflat.c(957):      389 word transitions (3/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.02 CPU 0.019 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.02 wall 0.020 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.74
+INFO: ngram_search.c(1276): Eliminated 2 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 204 nodes, 494 links
+INFO: ps_lattice.c(1374): Bestpath score: -1508
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:74:117) = -94764
+INFO: ps_lattice.c(1435): Joint P(O,S) = -117680 P(S|O) = -22916
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.002 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.011 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 28.90 19.00 -6.29  2.37 -13.64 -5.31 -9.56 -6.04 -6.97  3.74  2.41  1.73 -1.96 >
+INFO: cmn_live.c(138): Update to   < 39.21 23.70 -8.03  9.79 -13.07  1.01 -14.51 -0.45 -4.22  0.49  2.63 -1.54 -1.45 >
+INFO: ngram_search_fwdtree.c(1550):     1653 words recognized (11/fr)
+INFO: ngram_search_fwdtree.c(1552):    87061 senones evaluated (562/fr)
+INFO: ngram_search_fwdtree.c(1556):    57441 channels searched (370/fr), 6221 1st, 39649 last
+INFO: ngram_search_fwdtree.c(1559):     2342 words for which last channels evaluated (15/fr)
+INFO: ngram_search_fwdtree.c(1561):     1992 candidate words for entering last phone (12/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 2.52 CPU 1.625 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 2.62 wall 1.689 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 40 words
+INFO: ngram_search_fwdflat.c(948):     1204 words recognized (8/fr)
+INFO: ngram_search_fwdflat.c(950):    86443 senones evaluated (558/fr)
+INFO: ngram_search_fwdflat.c(952):    76220 channels searched (491/fr)
+INFO: ngram_search_fwdflat.c(954):     4366 words searched (28/fr)
+INFO: ngram_search_fwdflat.c(957):     2811 word transitions (18/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.05 CPU 0.031 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.05 wall 0.032 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.123
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 202 nodes, 335 links
+INFO: ps_lattice.c(1374): Bestpath score: -7459
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:123:153) = -499590
+INFO: ps_lattice.c(1435): Joint P(O,S) = -556094 P(S|O) = -56504
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.009 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 39.21 23.70 -8.03  9.79 -13.07  1.01 -14.51 -0.45 -4.22  0.49  2.63 -1.54 -1.45 >
+INFO: cmn_live.c(138): Update to   < 36.47 22.03 -10.34  6.93 -12.69  2.50 -14.12 -0.66 -3.72  0.52  2.09 -2.08 -1.31 >
+INFO: ngram_search_fwdtree.c(1550):      404 words recognized (6/fr)
+INFO: ngram_search_fwdtree.c(1552):    22833 senones evaluated (326/fr)
+INFO: ngram_search_fwdtree.c(1556):    10714 channels searched (153/fr), 3036 1st, 3827 last
+INFO: ngram_search_fwdtree.c(1559):      658 words for which last channels evaluated (9/fr)
+INFO: ngram_search_fwdtree.c(1561):      494 candidate words for entering last phone (7/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.17 CPU 1.677 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.11 wall 1.584 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 4 words
+INFO: ngram_search_fwdflat.c(948):      356 words recognized (5/fr)
+INFO: ngram_search_fwdflat.c(950):     3078 senones evaluated (44/fr)
+INFO: ngram_search_fwdflat.c(952):     1509 channels searched (21/fr)
+INFO: ngram_search_fwdflat.c(954):      438 words searched (6/fr)
+INFO: ngram_search_fwdflat.c(957):      159 word transitions (2/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.01 CPU 0.016 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.01 wall 0.019 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.20
+INFO: ngram_search.c(1276): Eliminated 0 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 51 nodes, 57 links
+INFO: ps_lattice.c(1374): Bestpath score: -675
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:20:68) = -63834
+INFO: ps_lattice.c(1435): Joint P(O,S) = -77743 P(S|O) = -13909
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.018 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 36.47 22.03 -10.34  6.93 -12.69  2.50 -14.12 -0.66 -3.72  0.52  2.09 -2.08 -1.31 >
+INFO: cmn_live.c(138): Update to   < 39.63 21.81 -11.49  6.55 -13.15  2.04 -16.76  0.11 -3.61  0.68  2.47 -2.94 -1.26 >
+INFO: ngram_search_fwdtree.c(1550):     1814 words recognized (13/fr)
+INFO: ngram_search_fwdtree.c(1552):    83439 senones evaluated (596/fr)
+INFO: ngram_search_fwdtree.c(1556):    58021 channels searched (414/fr), 5982 1st, 40274 last
+INFO: ngram_search_fwdtree.c(1559):     2490 words for which last channels evaluated (17/fr)
+INFO: ngram_search_fwdtree.c(1561):     2310 candidate words for entering last phone (16/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.70 CPU 1.214 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.54 wall 1.099 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 41 words
+INFO: ngram_search_fwdflat.c(948):     1766 words recognized (13/fr)
+INFO: ngram_search_fwdflat.c(950):    80972 senones evaluated (578/fr)
+INFO: ngram_search_fwdflat.c(952):    78221 channels searched (558/fr)
+INFO: ngram_search_fwdflat.c(954):     4122 words searched (29/fr)
+INFO: ngram_search_fwdflat.c(957):     2426 word transitions (17/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.05 CPU 0.036 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.05 wall 0.038 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.101
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 344 nodes, 1609 links
+INFO: ps_lattice.c(1374): Bestpath score: -4679
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:101:138) = -274530
+INFO: ps_lattice.c(1435): Joint P(O,S) = -342395 P(S|O) = -67865
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.002 xRT
+INFO: ngram_search.c(875): bestpath 0.02 wall 0.011 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 39.63 21.81 -11.49  6.55 -13.15  2.04 -16.76  0.11 -3.61  0.68  2.47 -2.94 -1.26 >
+INFO: cmn_live.c(138): Update to   < 37.67 21.37 -11.25  4.87 -11.93  1.40 -17.13 -0.33 -2.56  1.14  1.68 -3.12 -1.31 >
+INFO: ngram_search_fwdtree.c(1550):      458 words recognized (6/fr)
+INFO: ngram_search_fwdtree.c(1552):    27748 senones evaluated (365/fr)
+INFO: ngram_search_fwdtree.c(1556):    13131 channels searched (172/fr), 3312 1st, 4741 last
+INFO: ngram_search_fwdtree.c(1559):      743 words for which last channels evaluated (9/fr)
+INFO: ngram_search_fwdtree.c(1561):      822 candidate words for entering last phone (10/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.73 CPU 2.280 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.55 wall 2.038 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 3 words
+INFO: ngram_search_fwdflat.c(948):      369 words recognized (5/fr)
+INFO: ngram_search_fwdflat.c(950):     3484 senones evaluated (46/fr)
+INFO: ngram_search_fwdflat.c(952):     1731 channels searched (22/fr)
+INFO: ngram_search_fwdflat.c(954):      429 words searched (5/fr)
+INFO: ngram_search_fwdflat.c(957):      127 word transitions (1/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.01 CPU 0.017 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.01 wall 0.019 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.39
+INFO: ngram_search.c(1276): Eliminated 2 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 83 nodes, 112 links
+INFO: ps_lattice.c(1374): Bestpath score: -1074
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:39:74) = -62440
+INFO: ps_lattice.c(1435): Joint P(O,S) = -81174 P(S|O) = -18734
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.002 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.017 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 37.67 21.37 -11.25  4.87 -11.93  1.40 -17.13 -0.33 -2.56  1.14  1.68 -3.12 -1.31 >
+INFO: cmn_live.c(138): Update to   < 37.81 22.23 -11.09  5.81 -12.34  0.70 -16.76 -0.62 -3.48  0.04  2.48 -2.37 -1.47 >
+INFO: ngram_search_fwdtree.c(1550):      483 words recognized (5/fr)
+INFO: ngram_search_fwdtree.c(1552):    25127 senones evaluated (279/fr)
+INFO: ngram_search_fwdtree.c(1556):    13718 channels searched (152/fr), 2881 1st, 7656 last
+INFO: ngram_search_fwdtree.c(1559):      722 words for which last channels evaluated (8/fr)
+INFO: ngram_search_fwdtree.c(1561):      416 candidate words for entering last phone (4/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.71 CPU 1.901 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.55 wall 1.719 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 19 words
+INFO: ngram_search_fwdflat.c(948):      345 words recognized (4/fr)
+INFO: ngram_search_fwdflat.c(950):    14879 senones evaluated (165/fr)
+INFO: ngram_search_fwdflat.c(952):    10739 channels searched (119/fr)
+INFO: ngram_search_fwdflat.c(954):      904 words searched (10/fr)
+INFO: ngram_search_fwdflat.c(957):      638 word transitions (7/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.02 CPU 0.021 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.02 wall 0.024 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.57
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 84 nodes, 34 links
+INFO: ps_lattice.c(1374): Bestpath score: -2406
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:57:88) = -157880
+INFO: ps_lattice.c(1435): Joint P(O,S) = -170761 P(S|O) = -12881
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.014 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(88): Update from < 37.81 22.23 -11.09  5.81 -12.34  0.70 -16.76 -0.62 -3.48  0.04  2.48 -2.37 -1.47 >
+INFO: cmn_live.c(105): Update to   < 38.52 22.86 -10.54  5.82 -12.99  1.33 -18.37 -1.03 -4.09  1.50  1.83 -2.66 -1.90 >
+INFO: cmn_live.c(120): Update from < 38.52 22.86 -10.54  5.82 -12.99  1.33 -18.37 -1.03 -4.09  1.50  1.83 -2.66 -1.90 >
+INFO: cmn_live.c(138): Update to   < 38.49 22.88 -10.54  5.77 -13.05  1.30 -18.36 -1.04 -4.04  1.55  1.81 -2.66 -1.90 >
+INFO: ngram_search_fwdtree.c(1550):     1553 words recognized (11/fr)
+INFO: ngram_search_fwdtree.c(1552):    75866 senones evaluated (550/fr)
+INFO: ngram_search_fwdtree.c(1556):    49496 channels searched (358/fr), 5893 1st, 32465 last
+INFO: ngram_search_fwdtree.c(1559):     2316 words for which last channels evaluated (16/fr)
+INFO: ngram_search_fwdtree.c(1561):     1577 candidate words for entering last phone (11/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 2.17 CPU 1.572 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 2.49 wall 1.802 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 40 words
+INFO: ngram_search_fwdflat.c(948):     1436 words recognized (10/fr)
+INFO: ngram_search_fwdflat.c(950):    83114 senones evaluated (602/fr)
+INFO: ngram_search_fwdflat.c(952):    81768 channels searched (592/fr)
+INFO: ngram_search_fwdflat.c(954):     4360 words searched (31/fr)
+INFO: ngram_search_fwdflat.c(957):     2508 word transitions (18/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.04 CPU 0.029 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.04 wall 0.031 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.101
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 207 nodes, 753 links
+INFO: ps_lattice.c(1374): Bestpath score: -6042
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:101:136) = -356503
+INFO: ps_lattice.c(1435): Joint P(O,S) = -409123 P(S|O) = -52620
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.009 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 38.49 22.88 -10.54  5.77 -13.05  1.30 -18.36 -1.04 -4.04  1.55  1.81 -2.66 -1.90 >
+INFO: cmn_live.c(138): Update to   < 35.95 22.42 -9.41  4.19 -13.07  1.17 -16.70 -0.54 -4.12 -0.43  1.66 -1.13 -0.99 >
+INFO: ngram_search_fwdtree.c(1550):      673 words recognized (7/fr)
+INFO: ngram_search_fwdtree.c(1552):    35463 senones evaluated (394/fr)
+INFO: ngram_search_fwdtree.c(1556):    18625 channels searched (206/fr), 3956 1st, 8715 last
+INFO: ngram_search_fwdtree.c(1559):     1015 words for which last channels evaluated (11/fr)
+INFO: ngram_search_fwdtree.c(1561):      907 candidate words for entering last phone (10/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.88 CPU 2.088 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.89 wall 2.105 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 14 words
+INFO: ngram_search_fwdflat.c(948):      561 words recognized (6/fr)
+INFO: ngram_search_fwdflat.c(950):    21471 senones evaluated (239/fr)
+INFO: ngram_search_fwdflat.c(952):    17096 channels searched (189/fr)
+INFO: ngram_search_fwdflat.c(954):     1263 words searched (14/fr)
+INFO: ngram_search_fwdflat.c(957):      666 word transitions (7/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.02 CPU 0.019 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.02 wall 0.021 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.38
+INFO: ngram_search.c(1276): Eliminated 0 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 136 nodes, 230 links
+INFO: ps_lattice.c(1374): Bestpath score: -1817
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:38:88) = -135371
+INFO: ps_lattice.c(1435): Joint P(O,S) = -147632 P(S|O) = -12261
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.002 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.016 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 35.95 22.42 -9.41  4.19 -13.07  1.17 -16.70 -0.54 -4.12 -0.43  1.66 -1.13 -0.99 >
+INFO: cmn_live.c(138): Update to   < 36.98 22.78 -6.96  6.01 -13.05  1.25 -19.14 -0.03 -4.62  1.23  0.91 -1.76 -1.22 >
+INFO: ngram_search_fwdtree.c(1550):     1731 words recognized (12/fr)
+INFO: ngram_search_fwdtree.c(1552):    78486 senones evaluated (561/fr)
+INFO: ngram_search_fwdtree.c(1556):    53433 channels searched (381/fr), 6001 1st, 37251 last
+INFO: ngram_search_fwdtree.c(1559):     2338 words for which last channels evaluated (16/fr)
+INFO: ngram_search_fwdtree.c(1561):     1628 candidate words for entering last phone (11/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.82 CPU 1.301 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.84 wall 1.312 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 39 words
+INFO: ngram_search_fwdflat.c(948):     1141 words recognized (8/fr)
+INFO: ngram_search_fwdflat.c(950):    87770 senones evaluated (627/fr)
+INFO: ngram_search_fwdflat.c(952):    79186 channels searched (565/fr)
+INFO: ngram_search_fwdflat.c(954):     4332 words searched (30/fr)
+INFO: ngram_search_fwdflat.c(957):     2706 word transitions (19/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.04 CPU 0.030 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.04 wall 0.031 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.116
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 220 nodes, 688 links
+INFO: ps_lattice.c(1374): Bestpath score: -5653
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:116:138) = -322753
+INFO: ps_lattice.c(1435): Joint P(O,S) = -335264 P(S|O) = -12511
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.002 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.010 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(88): Update from < 36.98 22.78 -6.96  6.01 -13.05  1.25 -19.14 -0.03 -4.62  1.23  0.91 -1.76 -1.22 >
+INFO: cmn_live.c(105): Update to   < 36.89 22.79 -6.67  5.39 -13.46  1.16 -19.54 -0.50 -4.52  1.11  1.00 -0.87 -1.28 >
+INFO: cmn_live.c(120): Update from < 36.89 22.79 -6.67  5.39 -13.46  1.16 -19.54 -0.50 -4.52  1.11  1.00 -0.87 -1.28 >
+INFO: cmn_live.c(138): Update to   < 36.47 22.66 -6.33  5.28 -13.30  0.97 -19.45 -1.02 -5.13  0.69  0.72 -0.65 -0.97 >
+INFO: ngram_search_fwdtree.c(1550):      954 words recognized (11/fr)
+INFO: ngram_search_fwdtree.c(1552):    48077 senones evaluated (546/fr)
+INFO: ngram_search_fwdtree.c(1556):    30713 channels searched (349/fr), 3864 1st, 18794 last
+INFO: ngram_search_fwdtree.c(1559):     1423 words for which last channels evaluated (16/fr)
+INFO: ngram_search_fwdtree.c(1561):     1634 candidate words for entering last phone (18/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 2.04 CPU 2.320 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.95 wall 2.211 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 25 words
+INFO: ngram_search_fwdflat.c(948):      846 words recognized (10/fr)
+INFO: ngram_search_fwdflat.c(950):    39717 senones evaluated (451/fr)
+INFO: ngram_search_fwdflat.c(952):    38484 channels searched (437/fr)
+INFO: ngram_search_fwdflat.c(954):     2192 words searched (24/fr)
+INFO: ngram_search_fwdflat.c(957):     1221 word transitions (13/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.03 CPU 0.030 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.03 wall 0.033 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.45
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 182 nodes, 572 links
+INFO: ps_lattice.c(1374): Bestpath score: -2426
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:45:86) = -175394
+INFO: ps_lattice.c(1435): Joint P(O,S) = -199337 P(S|O) = -23943
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.015 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+INFO: cmn_live.c(120): Update from < 36.47 22.66 -6.33  5.28 -13.30  0.97 -19.45 -1.02 -5.13  0.69  0.72 -0.65 -0.97 >
+INFO: cmn_live.c(138): Update to   < 35.51 22.20 -8.66  4.75 -11.19  0.21 -21.23 -1.62 -3.72  1.16  1.59 -1.01 -1.20 >
+INFO: ngram_search_fwdtree.c(1550):      914 words recognized (10/fr)
+INFO: ngram_search_fwdtree.c(1552):    40733 senones evaluated (448/fr)
+INFO: ngram_search_fwdtree.c(1556):    23378 channels searched (256/fr), 4002 1st, 13893 last
+INFO: ngram_search_fwdtree.c(1559):     1227 words for which last channels evaluated (13/fr)
+INFO: ngram_search_fwdtree.c(1561):      799 candidate words for entering last phone (8/fr)
+INFO: ngram_search_fwdtree.c(1564): fwdtree 1.39 CPU 1.524 xRT
+INFO: ngram_search_fwdtree.c(1567): fwdtree 1.34 wall 1.472 xRT
+INFO: ngram_search_fwdflat.c(302): Utterance vocabulary contains 17 words
+INFO: ngram_search_fwdflat.c(948):      650 words recognized (7/fr)
+INFO: ngram_search_fwdflat.c(950):    33292 senones evaluated (366/fr)
+INFO: ngram_search_fwdflat.c(952):    24612 channels searched (270/fr)
+INFO: ngram_search_fwdflat.c(954):     1559 words searched (17/fr)
+INFO: ngram_search_fwdflat.c(957):      863 word transitions (9/fr)
+INFO: ngram_search_fwdflat.c(960): fwdflat 0.02 CPU 0.025 xRT
+INFO: ngram_search_fwdflat.c(963): fwdflat 0.03 wall 0.027 xRT
+INFO: ngram_search.c(1250): lattice start node <s>.0 end node </s>.65
+INFO: ngram_search.c(1276): Eliminated 1 nodes before end node
+INFO: ngram_search.c(1381): Lattice has 128 nodes, 567 links
+INFO: ps_lattice.c(1374): Bestpath score: -2470
+INFO: ps_lattice.c(1378): Normalizer P(O) = alpha(</s>:65:89) = -136187
+INFO: ps_lattice.c(1435): Joint P(O,S) = -154595 P(S|O) = -18408
+INFO: ngram_search.c(872): bestpath 0.00 CPU 0.001 xRT
+INFO: ngram_search.c(875): bestpath 0.01 wall 0.016 xRT
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
+ERROR: "pocketsphinx.c", line 471: Cannot change search while decoding, end utterance first
