@@ -1,8 +1,85 @@
+#!/bin/sh
+
+build_sphinxbase() {
+	mkdir speech_recognition && cd speech_recognition
+	git clone https://github.com/cmusphinx/sphinxbase.git
+	cd sphinxbase
+	./autogen.sh
+	./configure
+	make clean all
+	make check
+	sudo make install
+}
+
+#	cd ..
+build_pocketsphinx() {
+	git clone https://github.com/cmusphinx/pocketsphinx
+	cd pocketsphinx
+	./autogen.sh
+	./configure
+	make clean all
+	make check
+	sudo make install
+}
+
+#cd ..
+build_sphinxtrain() {
+	git clone https://github.com/cmusphinx/sphinxtrain.git
+	cd sphinxtrain
+	./autogen.sh
+	./configure
+	make clean all
+	make check
+	sudo make install
+}
+
+# cd ..
+
+build_subversion() {
+	svn checkout svn://svn.code.sf.net/p/cmusphinx/code/trunk cmusphinx-code
+	cd cmusphinx-code
+	cd cmuclmtk
+	./autogen.sh
+	./configure
+	make clean all
+	make check
+	sudo make install
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## STUFF TO REFACTOR ---------------
 # Install all the dependencies in a fresh debian based system
+echo "if somehow you are running this on docker you might wanted to install sudo"
+echo "or changed to su -"
 sudo apt-get install -y gcc automake autoconf libtool bison swig python-dev libpulse-dev subversion
 cd ~/
-mkdir buildinsphinx && cd buildinsphinx
-mkdir speech_recognition && speech_recognition
+#mkdir buildinsphinx && cd buildinsphinx
+mkdir speech_recognition && cd speech_recognition
 git clone https://github.com/cmusphinx/sphinxbase.git
 cd sphinxbase
 ./autogen.sh
@@ -12,7 +89,11 @@ make check
 sudo make install
 
 ## checkpoint kinda make the changes permanent
+
+
 export LD_LIBRARY_PATH=/usr/local/lib
+
+
 #sudo vim /etc/ld.so.conf
 sudo echo "include /etc/ld.so.conf.d/*.conf" >> /etc/ld.so.conf
 sudo echo "/usr/local/lib" >> /etc/ld.so.conf
