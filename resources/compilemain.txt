@@ -1,0 +1,4 @@
+gcc -o test pendejada.c \
+    -DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" \
+    -DPENDEJADA=\"`pwd`\" \
+    `pkg-config --cflags --libs pocketsphinx sphinxbase`
