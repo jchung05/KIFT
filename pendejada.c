@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 01:11:52 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/04/23 06:41:08 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/04/26 04:46:31 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int			main(int ac, char **av)
 			"-hmm", MODELDIR "/en-us/en-us",
 			"-lm", PENDEJADA "/PENDEJADADICTIONARY/2877.lm",
 			"-dict", PENDEJADA "/PENDEJADADICTIONARY/2877.dic",
+			"-kws", "./keyphrase.list",
 			"-logfn", "./testinglog",
 			NULL);
 
@@ -80,7 +81,7 @@ int			main(int ac, char **av)
 	ad = ad_open_dev("sysdefault", (int)cmd_ln_float32_r(config, "-samprate"));
 
 //	ps_set_keyphrase(ps, "keyphrase_search", "PENDEJADA");
-	ps_set_keyphrase(ps, "keyphrase_search", "SET");
+//	ps_set_keyphrase(ps, "keyphrase_search", "SET");
 //	ps_set_search(ps, "keyphrase_search");
 	while (1)
 	{
