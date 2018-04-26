@@ -6,4 +6,4 @@ pocketsphinx_continuous -inmic yes
 
 pkg-config --cflags --libs pocketsphinx sphinxbase
 
-gcc main.c -o kift -DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" `pkg-config --cflags --libs pocketsphinx sphinxbase`"
+gcc main.c -o kift -DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" `pkg-config --cflags --libs pocketsphinx sphinxbase`
