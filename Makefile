@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/26 04:46:42 by gmalpart          #+#    #+#              #
-#    Updated: 2018/04/26 04:56:41 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/04/27 05:06:27 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ CFILES = pendejada.c
 all: $(NAME)
 
 $(NAME):
-	gcc -o $(NATEST) $(CFILES) $(DEFCOMPILER) $(EXTRAHEADERS)
+	gcc -o $(NATEST) -I $(HEADERS) $(CFILES) $(DEFCOMPILER) $(EXTRAHEADERS)
 
 re:
 	rm $(NATEST)
