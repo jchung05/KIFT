@@ -1,0 +1,28 @@
+#!/bin/bash
+
+now_hour=$(date "+%H")
+now_min=$(date "+%M")
+
+read -p "Set hour in military time: " hours
+read -p "Set minutes: " minutes
+
+if [ $hours -ge 0 ] && [ $hours -le 23 ] && [ $minutes -ge 0 ] && [ $minutes -le 59 ]
+	then
+	if [ $hours -ge $now_hour ]
+		then hour_countdown=$(($hours - $now_hour))
+		else hour_countdown=$((24 - $now_hour + $hours))
+	fi
+
+	if [ $minutes -ge $now_min ]
+		then minute_countdown=$(($minutes - $now_min))
+		else minute_countdown=$((60 - $now_min + $minutes))
+	fi
+fi
+
+hour_sec=$(($hour_countdown * 3600))
+min_secs=$(($minute_countdown * 60))
+total=$(($hour_sec + $min_secs))
+sleep $total
+
+#osascript -e "set Volume 10"
+say "BEEP BEEP WAKE UP MOTHERFUCKER IT'S TIME TO RISE AND SHINE"

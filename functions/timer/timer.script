@@ -6,16 +6,27 @@
 #    By: ttran <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/13 23:34:58 by ttran             #+#    #+#              #
-#    Updated: 2018/04/17 20:49:41 by ttran            ###   ########.fr        #
+#    Updated: 2018/05/07 19:28:23 by ttran            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
-sleep $1
-osascript -e "set Volume 10"
+
+read -p "Hours: " hours
+hour=$(($hours * 3600))
+
+read -p "Minutes: " minutes
+minute=$(($minutes * 60))
+
+read -p "Seconds: " seconds
+
+total=$(($hour + $minute + $seconds))
+echo "Running for $total seconds"
+sleep $total
+#osascript -e "set Volume 10"
 say "BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP ok
 I'm done ....................................... BEEP BEEP BEEP BEEP BEEP BEEP
 BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP
 BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP
 NISEKOI IS GARBAGE BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP
-BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP" 
+BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP BEEP"
