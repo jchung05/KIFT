@@ -12,7 +12,27 @@
 
 #include <string.h>
 
-int timer(char *time)
+
+/*
+int	is_number(char *nbr)
 {
-	
+	while (*nbr)
+	{
+		if (!(*nbr >= '0' && *nbr <= '9'))
+			return (0);
+		nbr++;
+	}
+	return (1);
+}
+*/
+
+/*
+** Person says "set timer"
+** This function is called
+** Function asks for user input! 
+*/
+
+int timer(void)
+{
+	system("sh timer.script");
 }
