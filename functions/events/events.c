@@ -10,4 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 
+int events(void)
+{
+	system("w3m yahoo.com/news/");
+	return (0);
+}

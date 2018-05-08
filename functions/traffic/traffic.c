@@ -10,4 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 
+int traffic(void)
+{
+	system("w3m https://www.viamichelin.com/web/Traffic/Traffic_info-Fremont-_-California-United_States");
+	return (0);
+}
