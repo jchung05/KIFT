@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/27 04:43:48 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/04/27 07:03:12 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/11 10:17:08 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,61 @@ char const			*hyp;
 char const			*decoded_speech;
 
 t_kift				*handler;
+
+
+void				parse_commands(char *str)
+{
+	if (strstr(str, "SET A TIMER"))
+		printf("Setting a timer\n");
+	else
+		printf("Didnt recognize your command\n");
+}
+
+int					get_post(char const *str, char *key)
+{
+	int				i;
+	int				e;
+
+	e = 0;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == key[e])
+		{
+			while (str[i] && str[i] == key[e] && e < strlen(key))
+			{
+				if (str[i] != key[e])
+				{
+					e = 0;
+					break ;
+				}
+				++i;
+				++e;
+			}
+		}
+		else
+			i++;
+	}
+	printf("postkey = |%d|\n", i);
+	return (i);
+}
+
+void				decomposing_string(char const *str)
+{
+	int		i;
+	int		postkey;
+
+	i = 0;
+	// implement hot word here
+	if (strstr(str, "PENDEJADA"))
+	{
+		handler->listen = 1;
+		printf("LISTENING = |%d|", (int)handler->listen);
+		postkey = get_post(str, "PENDEJADA");
+		parse_commands((char*)str + postkey);
+	}
+}
+
 
 /**
 ** Remember to use the proper language model and dictionary
@@ -152,54 +207,5 @@ const char			*recognize_from_microphone(void)
 **			^	(SET A TIMER)
 */
 
-int					get_post(char const str, char *key)
-{
-	int				i;
-	int				e;
 
-	e = 0;
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == key[e])
-		{
-			while (str[i] && str[i] == key[e] && e < strlen(key))
-			{
-				if (str[i] != key[e])
-				{
-					e = 0;
-					break ;
-				}
-				++i;
-				++e;
-			}
-		}
-		else
-			i++;
-	}
-	return (i);
-}
 
-void				decomposing_string(char const str)
-{
-	int		i;
-	int		postkey;
-
-	i = 0;
-	// implement hot word here
-	if (strstr(str, "PENDEJADA"))
-	{
-		handler->listen = 1;
-		printf("LISTENING = |%d|", (int)handler->listen);
-		postkey = get_post(str, "PENDEJADA");
-		parse_commands(str + postkey);
-	}
-}
-
-void				parse_commands(char *str)
-{
-	if (strstr(str, "SET A TIMER")
-		printf("Setting a timer\n";)
-	else
-		printf("Didnt recognize your command\n");
-}
