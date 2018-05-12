@@ -6,7 +6,7 @@
 /*   By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/27 04:43:48 by gmalpart          #+#    #+#             */
-/*   Updated: 2018/05/12 06:45:53 by gmalpart         ###   ########.fr       */
+/*   Updated: 2018/05/12 07:05:45 by gmalpart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,63 +28,6 @@ char const			*decoded_speech;
 t_kift				*handler;
 
 
-void				parse_commands(char *str)
-{
-	if (strstr(str, "SET A TIMER"))
-		printf("Setting a timer\n");
-	else
-		printf("Didnt recognize your command\n");
-}
-
-int		compare_values(char const *str, char *key)
-{
-	int	i;
-	int	e;
-
-	i = 0;
-	e = 0; 
-	while (str[i] && key[e] && str[i] == key[e])
-	{
-		i++;
-		e++;
-		if (key[e] == '\0')
-			return(i);
-	}
-	return (-1);
-}
-
-int					get_post(char const *str, char *key)
-{
-	int		i;
-	int		e;
-
-	i = 0;
-	e = 0;
-	while(str[i])
-	{
-		if (str[i] == key[e] && compare_values(str, key) != -1)
-				return (compare_values(str, key) + i);
-		else
-			i++;
-	}
-	return (0);
-}
-
-void				decomposing_string(char const *str)
-{
-	int		i;
-	int		postkey;
-
-	i = 0;
-	// implement hot word here
-	if (strstr(str, "LARRY"))
-	{
-		handler->listen = 1;
-		printf("LISTENING = |%d|", (int)handler->listen);
-		postkey = get_post(str, "LARRY");
-		parse_commands((char*)str + postkey);
-	}
-}
 
 
 /**
@@ -110,29 +53,11 @@ int					main(int argc, char **argv)
 		return (-1);
 	}
 	handler->listen = 0;
-/*
-	config = cmd_ln_init(NULL, ps_args(), TRUE, 
-				"-hmm", MODELDIR "/en-us/en-us",
-				"-lm", MODELDIR "/en-us/en-us.lm.bin",
-				"-dict", MODELDIR "/en-us/cmudict-en-us.dict",
-				"-logfn", "/dev/null",
-				NULL);
-*/
-
-/*
-	config = cmd_ln_init(NULL, ps_args(), TRUE,
-			"-hmm", MODELDIR "/en-us/en-us",
-			"-lm", PENDEJADA "/PENDEJADADICTIONARY/2877.lm",
-			"-dict", PENDEJADA "/PENDEJADADICTIONARY/2877.dic",
-			"-kws", "./keyphrase.list",
-			"-logfn", "./testinglog",
-			NULL);
-*/
 
 	config = cmd_ln_init(NULL, ps_args(), TRUE,
 			"-hmm", MODELDIR "/en-us/en-us",
-			"-lm", DICTIONARY "/Dictionary/2877.lm",
-			"-dict", DICTIONARY "/Dictionary/2877.dic",
+			"-lm", DICTIONARY "/Dictionary/8136.lm",
+			"-dict", DICTIONARY "/Dictionary/8136.dic",
 			"-kws", "./keyphrase.list",
 			"-logfn", "./testinglog",
 			NULL);

@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/26 04:46:42 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/12 06:46:32 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/05/12 06:53:24 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ EXTRAHEADERS = `pkg-config --cflags --libs pocketsphinx sphinxbase`
 
 # all the necesary files
 
-CFILES = pendejada.c
+CFILES = pendejada.c \
+		 parsing.c
 
 SRCFILES = $(addprefix src/, $(CFILES))
 
