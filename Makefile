@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/26 04:46:42 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/11 07:39:32 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/05/12 06:46:32 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,19 +17,25 @@ GCC = gcc
 FLAGS = -Wall -Wextra -Werror
 LOGFILE = testinglog
 
+#DEFCOMPILER =	-DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" \
+#				-DPENDEJADA=\"`pwd`\"
+
 DEFCOMPILER =	-DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\" \
-				-DPENDEJADA=\"`pwd`\"
+				-DDICTIONARY=\"`pwd`\"
 
 EXTRAHEADERS = `pkg-config --cflags --libs pocketsphinx sphinxbase`
 
 
 # all the necesary files
+
 CFILES = pendejada.c
+
+SRCFILES = $(addprefix src/, $(CFILES))
 
 all: $(NAME)
 
 $(NAME):
-	gcc -g -o $(NATEST) -I $(HEADERS) $(CFILES) $(DEFCOMPILER) $(EXTRAHEADERS)
+	gcc -o $(NATEST) -I $(HEADERS) $(SRCFILES) $(DEFCOMPILER) $(EXTRAHEADERS)
 
 re:
 	rm $(NATEST)
