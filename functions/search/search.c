@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "kift.h"
+
 void search(char *arg)
 {
 	char cmd[256];
@@ -20,7 +22,11 @@ void search(char *arg)
 	system(cmd);
 }
 
+
+/*
 int main(int argc, char const *argv[]) {
 	search(argv[1]);
 	return 0;
 }
+
+*/

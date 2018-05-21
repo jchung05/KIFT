@@ -38,4 +38,26 @@ int					compare_values(char const *str, char *key);
 int					get_post(char const *str, char *key);
 void				decomposing_string(char const *str);
 
+/*
+** FUNCTIONS - DIR
+** casting everyone but testing only the timer for the demo
+*/
+
+// demo
+int timer(void);
+
+int	alarm(void);
+int brightness(char *brightness_value);
+int events(void);
+int exitsphinx(void);
+void help(void);
+void history(void);
+void location(void);
+void music(char *arg, char *song, int duration);
+void search(char *arg);
+void send(char *subject, char *content, char *recipient);
+int traffic(void);
+void weather(char *location); // ask stan what happen
+
+
 #endif

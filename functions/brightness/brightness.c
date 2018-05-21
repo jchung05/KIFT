@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "kift.h"
 
 /*
 ** int system(const char *command) allows for the execution of shell commands

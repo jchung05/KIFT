@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void history()
+#include "kift.h"
+
+void history(void)
 {
 	system("say -f ../../history.log");
 }

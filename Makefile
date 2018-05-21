@@ -6,7 +6,7 @@
 #    By: gmalpart <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/26 04:46:42 by gmalpart          #+#    #+#              #
-#    Updated: 2018/05/12 08:09:52 by gmalpart         ###   ########.fr        #
+#    Updated: 2018/05/21 07:01:32 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,22 @@ EXTRAHEADERS = `pkg-config --cflags --libs pocketsphinx sphinxbase`
 
 # all the necesary files
 
+DIRFILES =	timer/timer.c \
+			alarm/alarm.c \
+			brightness/brightness.c \
+			events/events.c \
+			exit/exit.c \
+			help/help.c \
+			history/history.c \
+			location/location.c \
+			music/music.c \
+			search/search.c \
+			send/send.c \
+			traffic/traffic.c \
+			weather/weather.c
+
+DIRCFILES = $(addprefix functions/, $(DIRFILES))
+
 CFILES = pendejada.c \
 		 parsing.c
 
@@ -36,7 +52,7 @@ SRCFILES = $(addprefix src/, $(CFILES))
 all: $(NAME)
 
 $(NAME):
-	gcc -o $(NATEST) -I $(HEADERS) $(SRCFILES) $(DEFCOMPILER) $(EXTRAHEADERS)
+	gcc -o $(NATEST) -I $(HEADERS) $(SRCFILES) $(DIRCFILES) $(DEFCOMPILER) $(EXTRAHEADERS)
 
 re:
 	rm $(NATEST)

@@ -15,7 +15,10 @@
 void				parse_commands(char *str)
 {
 	if (strstr(str, "SET A TIMER"))
+	{
 		printf("Setting a timer\n");
+		timer();
+	}
 	else
 		printf("Didnt recognize your command\n");
 }

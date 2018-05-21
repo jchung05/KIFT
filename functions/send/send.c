@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "kift.h"
 
 void send(char *subject, char *content, char *recipient)
 {

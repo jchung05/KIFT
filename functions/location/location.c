@@ -10,12 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void location()
+#include "kift.h"
+
+void location(void)
 {
 		system("sh location.sh");
 }
 
+/*
 int main(int argc, char const *argv[]) {
 	location();
 	return 0;
 }
+*/

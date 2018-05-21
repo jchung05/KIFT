@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "kift.h"
 
 /*
 int	is_number(char *nbr)
@@ -30,10 +29,12 @@ int	is_number(char *nbr)
 ** Person says "set timer"
 ** This function is called
 ** Function asks for user input! 
+** GERARDO/COMMENT = have to specify the path of the script
 */
 
 int timer(void)
 {
-	system("sh timer.script");
+//	system("sh timer.script");
+	system("sh functions/timer/timer.script");
 	return (0);
 }
